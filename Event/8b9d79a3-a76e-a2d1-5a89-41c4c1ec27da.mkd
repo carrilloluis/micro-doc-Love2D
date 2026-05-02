@@ -1,0 +1,16 @@
+# love.event
+
+## Funciones
+
++ love.event.clear (>= 0.7.2)
+	* Limpia la _cola de eventos_ (Event Queue)
++ love.event.quit (>= 0.8.0)
+	* Sale de la aplicación.
++ love.event.poll
+	Returns an iterator for messages in the event queue. 		
++ love.event.pump
+	Pump events into the event queue. 		
++ love.event.push
+	Adds an event to the event queue. 		
++ love.event.wait
+	Like love.event.poll(), but blocks until there is an event in the queue. 	

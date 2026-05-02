@@ -1,0 +1,38 @@
++ love.joystick.close 	
+* Closes a joystick. 		Removed in 0.9.0
++ love.joystick.getAxes
+ 	Returns the position of each axis. 		Removed in 0.9.0
++ love.joystick.getAxis
+ 	Returns the direction of the axis. 		Removed in 0.9.0
++ love.joystick.getBall
+ 	Returns the change in ball position. 		Removed in 0.9.0
++ love.joystick.getHat 
+	Returns the direction of a hat. 		Removed in 0.9.0
++ love.joystick.getJoys
+tickCount 	Gets the number of connected joysticks. 	Added sin   ce 0.9.0 	
++ love.joystick.getJoys
+ticks 	Gets a list of connected Joysticks. 	Added since 0.9.0 	
++ love.joystick.getName
+ 	Returns the name of a joystick. 		Removed in 0.9.0
++ love.joystick.getNumA
+xes 	Returns the number of axes on the joystick. 		Removed in 0.9.0
++ love.joystick.getNumB
+alls 	Returns the number of balls on the joystick. 		Removed in 0.9.0
++ love.joystick.getNumB
+uttons 	Returns the number of buttons on the joystick. 		Removed in 0.9.0
++ love.joystick.getNumH
+ats 	Returns the number of hats on the joystick. 		Removed in 0.9.0
++ love.joystick.getNumJ
+oysticks 	Returns how many joysticks are available. 		Removed in 0.9.0
++ love.joystick.isDown 
+	Checks if a button on a joystick is pressed. 		Removed in 0.9.0
++ love.joystick.isOpen 
+	Checks if the joystick is open. 		Removed in 0.9.0
++ love.joystick.loadGam
+epadMappings 	Loads a gamepad mappings string or file created with love.joystick.saveGamepadMappings. 	Added since 0.9.2 	
++ love.joystick.open 	O
+pens up a joystick to be used. 		Removed in 0.9.0
++ love.joystick.saveGam
+epadMappings 	Saves the virtual gamepad mappings of all recently-used Joysticks that are recognized as gamepads. 	Added since 0.9.2 	
++ love.joystick.setGame
+padMapping 	Binds a virtual gamepad input to a button, axis or hat. 	Added since 0.9.0 	

@@ -1,0 +1,15 @@
+# love.font
+
+# Funciones
+
++ love.font.newFontData
+	Creates a new FontData. 	Added since  >= 0.7.0 	< in 0.8.0
++ love.font.newGlyphData
+	Creates a new GlyphData. 	Added since 0.7.0 	
++ love.font.newRasterizer
+	Creates a new Rasterizer. 	Added since 0.7.0 	
+
+Types
+FontData 	A FontData represents a font. 	Added since 0.7.0 	Removed in 0.8.0
+GlyphData 	A GlyphData represents a drawable symbol of a font. 	Added since 0.7.0 	
+Rasterizer 	A Rasterizer represents font data and glyphs. 	Added since 0.7.0 	

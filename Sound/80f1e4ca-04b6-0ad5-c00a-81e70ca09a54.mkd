@@ -1,0 +1,27 @@
+# love.sound
+
+## Funciones
+
++ love.sound.newDecoder
+	* Intenta encontrar un decodificador para los datos de sonido codificados en el archivo especificado como parámetro.
+
+	~~~
+	decoder = love.sound.newDecoder( file, buffer )
+	decoder = love.sound.newDecoder( file, buffer, rate )
+	~~~
+
++ love.sound.newSoundData
+	* Crea un nuevo dato de sónido (SoundData)
+
+	~~~
+	soundData = love.sound.newSoundData( filename )
+	soundData = love.sound.newSoundData( samples, rate, bits, channels )
+	~~~
+
+	```
+	wav = love.sound.newSoundData("doom.wav")
+	-- Beware: if doom.mp3 is a huge file, it will take
+	-- ages to decode.
+	mp3 = love.sound.newSoundData("doom.mp3")
+	```
+

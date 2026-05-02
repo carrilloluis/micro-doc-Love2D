@@ -1,0 +1,20 @@
+# love.image
+
++ love.image.isCompressed
+	* Determina whether a file can be loaded as CompressedData. 	Added since 0.9.0 	
++ love.image.newCompressedData
+	* Create a new CompressedImageData object from a compressed image file. 	Added since 0.9.0 	
++ love.image.newEncodedImageData
+	* Encodes ImageData. Removed in 0.8.0
++ love.image.newImageData
+	* Creates a new ImageData object.
+
+Tipos de datos relacionados 
+
+CompressedImageData 	Compressed image data designed to stay compressed in RAM and on the GPU. 	Added since 0.9.0 	
+ImageData 	Raw (decoded) image data. 	
+
+## Enumerables
+
+CompressedImageFormat 	Compressed image data formats. 	Added since 0.9.0 	
+ImageFormat 	Encoded image formats.

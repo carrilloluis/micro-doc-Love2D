@@ -1,0 +1,24 @@
+# love.system
+
+## Funciones
+
++ love.system.getOS (>= v0.9.0)
+	* Obtiene el _nombre_ del sistema operativo
+
++ love.system.getClipboardText (>= v0.9.0)
+	* Pega texto del portapapeles
+
++ love.system.setClipboardText (>= v0.9.0)
+ 	* Copia texto en el portapapeles
+
++ love.system.getPowerInfo (>= v0.9.0)
+ 	* Obtiene información de la fuente de energía del sistema
+
++ love.system.getProcessorCount (>= v0.9.0)
+	* Obtiene el número de núcleos del sistema (CPU cores)
+
++ love.system.openURL (>= v0.9.1)
+	* Opens a URL with the user's web or file browser.
+
++ love.system.vibrate (>= v0.10.0)
+	* Permite vibrar al dispositivo siempre y cuando se permita o sea posible
