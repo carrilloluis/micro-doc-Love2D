@@ -1,16 +1,57 @@
 # love.event
 
-## Funciones
+## Procedimientos y funciones
 
 + love.event.clear (>= 0.7.2)
-	* Limpia la _cola de eventos_ (Event Queue)
+	* Limpia/Vacía la _cola de eventos_ (Event Queue)
+
 + love.event.quit (>= 0.8.0)
-	* Sale de la aplicación.
+	* Sale del juego o de la aplicación.
+
+	~~~
+	function love.keypressed(key)
+		if key == 'escape' then
+			love.event.quit()
+		end
+	end 
+	~~~
+
 + love.event.poll
-	Returns an iterator for messages in the event queue. 		
+	* Retorna un iterador para los mensajes en la cola de eventos (event queue)
+	
+	```
+	for e, a, b, c, d in love.event.poll() do
+		if e == "quit" then
+			-- ok
+		end
+	end
+	```
+
 + love.event.pump
-	Pump events into the event queue. 		
+	* Extrae eventos de dentro de la cola de eventos (event queue)
+
+	```
+	love.event.pump()
+	```
+
 + love.event.push
-	Adds an event to the event queue. 		
+	* Agrega un evento a la cola de eventos (event queue)
+
+	```
+	love.event.push( e, a, b, c )
+	```
+
+	~~~
+	function love.keypressed(k)
+		if k == 'escape' then
+			love.event.push('q') 
+		end
+	end
+	~~~
+
 + love.event.wait
-	Like love.event.poll(), but blocks until there is an event in the queue. 	
+	* Trabaja al igual que **love.event.poll()**, pero bloquea la ejecución hasta que exista un evento en la cola de eventos.
+
+	```
+	e, a, b, c = love.event.wait( )
+	```
