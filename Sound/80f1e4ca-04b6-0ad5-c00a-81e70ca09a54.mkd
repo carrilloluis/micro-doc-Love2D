@@ -1,21 +1,29 @@
 # love.sound
 
-## Funciones
++ Este módulo es responsable por la decoficación de archivos de sónido
++ NO puede reproducir los sónidos por sí solo, para ello se necesita de **love.audio** 
 
-+ love.sound.newDecoder
-	* Intenta encontrar un decodificador para los datos de sonido codificados en el archivo especificado como parámetro.
-
-	~~~
-	decoder = love.sound.newDecoder( file, buffer )
-	decoder = love.sound.newDecoder( file, buffer, rate )
-	~~~
+## Procedimientos y funciones
 
 + love.sound.newSoundData
-	* Crea un nuevo dato de sónido (SoundData)
+	* Crea un nuevo objeto con datos de sónido (SoundData)
+Creates new SoundData from a filepath, File, or Decoder. It's also possible to create SoundData with a custom sample rate, channel and bit depth.
+
+The sound data will be decoded to the memory in a raw format. It is recommended to create only short sounds like effects, as a 3 minute song uses 30 MB of memory this way. 
 
 	~~~
-	soundData = love.sound.newSoundData( filename )
-	soundData = love.sound.newSoundData( samples, rate, bits, channels )
+	soundData = love.sound.newSoundData(
+		filename -- String
+	)
+
+	soundData = love.sound.newSoundData(
+		samples
+		, rate -- Number 44100
+		, bits -- Number 8 or 16
+		, channels -- Number { 1, 2 }
+	)
+
+	soundData = love.sound.newSoundData( decoder )
 	~~~
 
 	```
@@ -25,3 +33,23 @@
 	mp3 = love.sound.newSoundData("doom.mp3")
 	```
 
++ love.sound.newDecoder (< 0.7.1) <mark>obsoleto</mark>
+	* Intenta encontrar un decodificador para los datos de sonido codificados en el archivo especificado como parámetro.
+
+	```
+	decoder = love.sound.newDecoder(
+		file -- String
+		, buffer -- Int 2048
+	)
+	decoder = love.sound.newDecoder( file, buffer, rate )
+	```
+
+	~~~
+	~~~
+
+## Tipos de datos relacionados al sónido
+
++ Decoder
+	* An object which can gradually decode a sound file
++ SoundData
+	* Contains raw audio samples.
