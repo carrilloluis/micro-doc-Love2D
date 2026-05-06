@@ -1,15 +1,38 @@
 # love.font
 
-# Funciones
+Permite trabajar con fuentes tipográficas 
 
-+ love.font.newFontData
-	Creates a new FontData. 	Added since  >= 0.7.0 	< in 0.8.0
-+ love.font.newGlyphData
-	Creates a new GlyphData. 	Added since 0.7.0 	
-+ love.font.newRasterizer
-	Creates a new Rasterizer. 	Added since 0.7.0 	
+## Procedimientos y funciones
 
-Types
-FontData 	A FontData represents a font. 	Added since 0.7.0 	Removed in 0.8.0
-GlyphData 	A GlyphData represents a drawable symbol of a font. 	Added since 0.7.0 	
-Rasterizer 	A Rasterizer represents font data and glyphs. 	Added since 0.7.0 	
++ love.font.newGlyphData (>= 0.7.0)
+	* Crea un objeto del tipo GlyphData
+
+	```
+	glyphData = love.font.newGlyphData( rasterizer, glyph )
+	```
+
++ love.font.newRasterizer (>= 0.7.0)
+	* Crea un nuevo objeto del tipo Rasterizer
+
+```
+rasterizador = love.font.newRasterizer( dadoDeImagem, glifos )
+```
+
++ love.font.newFontData (>= 0.7.0, < 0.8.0) /obsoleto/
+	* Crea un objeto del tipo FontData
+
+	```
+	fontData = love.font.newFontData( rasterizer )
+	```
+
+## Tipos de datos relacionados a las fuentes
+
++ GlyphData (>= v0.7.0)
+	* Representa un símbolo dibujable? de una fuente
+
++ Rasterizer (>= v0.7.0)
+	* Representa los datos de una fuente y sus distintos glifos (símbolos)
+
++ FontData (>= v0.7.0, < v0.8.0) /obsoleto/
+	* Representa una fuente tipográfica
+	
