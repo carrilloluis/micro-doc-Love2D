@@ -1,20 +1,52 @@
 # love.image
 
-+ love.image.isCompressed
-	* Determina whether a file can be loaded as CompressedData. 	Added since 0.9.0 	
-+ love.image.newCompressedData
-	* Create a new CompressedImageData object from a compressed image file. 	Added since 0.9.0 	
-+ love.image.newEncodedImageData
-	* Encodes ImageData. Removed in 0.8.0
+Proveer una interfaz para decodificar/codificar datos de imagen 
+
+## Procedimientos y funciones
+
 + love.image.newImageData
-	* Creates a new ImageData object.
+	* Crea un nuevo objeto del tipo _ImageData_
 
-Tipos de datos relacionados 
++ love.image.newCompressedData (>= v0.9.0)
+	* Crea un nuevo objeto **CompressedImageData** desde un archivo de imagen comprimido
 
-CompressedImageData 	Compressed image data designed to stay compressed in RAM and on the GPU. 	Added since 0.9.0 	
-ImageData 	Raw (decoded) image data. 	
+	```
+	compressedImageData = love.image.newCompressedData( 
+		filename -- String
+	)
+	```
+
++ love.image.isCompressed (>= v0.9.0)
+	* Determina si un archivo puede ser cargado como dato comprimido (CompressedData)
+
+	~~~
+	boolCompressed = love.image.isCompressed(
+		filename -- String 
+	) -- Boolean
+	~~~
+
++ love.image.newEncodedImageData (< v0.8.0)
+	* Codifica ImageData. 
+
+	```
+	data = love.image.newEncodedImageData(
+		imageData -- String
+		, format
+	)
+	```
+
+## Tipos de datos relacionados 
+
++ CompressedImageData (>= v0.9.0)
+	* Comprime datos de imagen diseñados para permancer comprimidos en memoria (RAM) y en la tarjeta gráfica (GPU)
+
++ ImageData
+	* Para decodificar datos de imagen crudos
 
 ## Enumerables
 
-CompressedImageFormat 	Compressed image data formats. 	Added since 0.9.0 	
-ImageFormat 	Encoded image formats.
++ CompressedImageFormat (>= v0.9.0)
+	* Formatos de imagen de datos comprimidos   
+
++ ImageFormat
+	* Para codificar los formatos de imagen
