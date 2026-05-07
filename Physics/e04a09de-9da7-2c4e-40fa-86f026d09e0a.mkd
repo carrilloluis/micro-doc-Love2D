@@ -1,0 +1,88 @@
+# love.physics
+
++ Puede simular _física de cuerpo rígido_ (rigid body physics) en 2D  de una manera cercana a la realidad 
++ Este módulo está basado en la librería Box2D y su API (lo más parecido posible al original) 
+
+## Procedimientos y funciones
+
++ love.physics.getDistance (>= v0.8.0)
+	* Retorna los puntos más cercanos entre dos fixtures y su distancia
+
++ love.physics.getMeter (>= v0.8.0)
+	* Retorna la métrica del factor de escala 
+
++ love.physics.newBody
+	* Crea un nuevo cuerpo (2D rigid body)
+
++ love.physics.newChainShape (>= v0.8.0)
+	* Crea una nueva forma encadenada (ChainShape) 
+
++ love.physics.newCircleShape
+	* Crea una nueva forma circular (CircleShape)
+
++ love.physics.newDistanceJoint
+	* Crea una unión (DistanceJoint) entre dos cuerpos
+
++ love.physics.newEdgeShape (>= v0.8.0)
+	* Crea una nueva forma limitante (EdgeShape)
+
++ love.physics.newFixture (>= v0.8.0)
+	* Crea y enlaza un soporte
+
++ love.physics.newFrictionJoint (>= v0.8.0)
+	* Aplica una junta de fricción (FrictionJoint) en un cuerpo
+
++ love.physics.newGearJoint
+	* Crea una junta rodante (GearJoint) para conectar dos uniones
+
++ love.physics.newMouseJoint
+	* Crea una junta/unión entre un cuerpo y el ratón
+
++ love.physics.newPolygonShape
+	* Crea una nueva forma poligonal (PolygonShape)
+
++ love.physics.newPrismaticJoint
+	* Crea una unión prismática (PrismaticJoint) entre dos cuerpos
+
++ love.physics.newPulleyJoint
+	* Crea una junta de polea (PulleyJoint) para unir dos cuerpos uno al otro relacionados/conectados a un piso
+
++ love.physics.newRectangleShape
+	* Abreviatura para crear formas rectangulares (PolygonShapes)
+
++ love.physics.newRevoluteJoint
+	* Crea una junta de pivote entre dos cuerpos
+
++ love.physics.newRopeJoint (>= v0.8.0)
+	* Crea una junta entre dos cuerpos, para reforzar la máxima distancia entre ellas. 	
+
++ love.physics.newWeldJoint (>= v0.8.0)
+	* A WeldJoint essentially glues two bodies together
+
++ love.physics.newWheelJoint (>= v0.8.0)
+	* Crea una unión rodante (wheel joint)
+
++ love.physics.newWorld
+	* Crea un nuevo mundo/entorno de simulación de física
+
++ love.physics.setMeter (>= v0.8.0)
+	* Establece el nivel global del factor de escala 
+
+## Enumerables
+
+
+## Tipos de datos
+
++ Body
+	* Son objetos con velocidad y posición
++ Contact
+	* Son objetos creados para gestionar las colisiones en los entornos
++ Fixture (>= v0.8.0)
+	* Soporte de enlace entre formas y cuerpos
++ Joint
+	* Enlace entre múltiples cuerpos para intectuar con ellos
++ Shape
+	* Objetos usados para controlar la masa y sus colisiones
++ World
+	* Un entorno es un objeto que contiene cuerpos y enlaces.
+
